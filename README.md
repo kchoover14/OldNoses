@@ -1,5 +1,5 @@
 # OldNoses
-R code and raw data for 'Functional expression of odorant receptors in extinct hominins and ancient humans'
+This repo will contain the R code and raw data for `Olfaction in Neanderthals, Denisovans and humans differed by sensitivity but not specificity'
 
 This work is subject to the Creative Commons Attribution Share Alike 4.0 International license which stipulates that derivatives must be distributed under the same or a similar, compatible license.
 

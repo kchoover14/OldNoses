@@ -1,3 +1,3 @@
 # OldNoses
-This repo will contain the R code and raw data for `Olfaction in Neanderthals, Denisovans and humans differed by sensitivity but not specificity'
+This repository will contain the R code, sequence data, and raw data for `Genetic and functional odorant receptor variation in the Homo lineage'
 

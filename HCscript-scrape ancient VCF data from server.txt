@@ -1,0 +1,193 @@
+module load bio/VCFtools/0.1.14-pic-intel-2016b-Perl-5.22.1
+
+#call vcfs by OR for alt
+vcftools --gzvcf alt1.vcf.gz --chr 1 --from-bp 247920764 --to-bp 247921708 --remove-indels --recode --recode-INFO-all --out alt-OR1C1
+vcftools --gzvcf alt1.vcf.gz --chr 1 --from-bp 247614331 --to-bp 247615284 --remove-indels --recode --recode-INFO-all --out alt-OR2B11
+vcftools --gzvcf alt1.vcf.gz --chr 1 --from-bp 158532441 --to-bp 158533394 --remove-indels --recode --recode-INFO-all --out alt-OR6P1
+vcftools --gzvcf alt1.vcf.gz --chr 1 --from-bp 159504868 --to-bp 159505797 --remove-indels --recode --recode-INFO-all --out alt-OR10J5
+vcftools --gzvcf alt3.vcf.gz --chr 3 --from-bp 98188421 --to-bp 98189347 --remove-indels --recode --recode-INFO-all --out alt-OR5K1
+vcftools --gzvcf alt6.vcf.gz --chr 6 --from-bp 29141413 --to-bp 29142351 --remove-indels --recode --recode-INFO-all --out alt-OR2J2
+vcftools --gzvcf alt6.vcf.gz --chr 6 --from-bp 29079668 --to-bp 29080603 --remove-indels --recode --recode-INFO-all --out alt-OR2J3
+vcftools --gzvcf alt6.vcf.gz --chr 6 --from-bp 29011990 --to-bp 29012952 --remove-indels --recode --recode-INFO-all --out alt-OR2W1
+vcftools --gzvcf alt6.vcf.gz --chr 6 --from-bp 29394471 --to-bp 29395418 --remove-indels --recode --recode-INFO-all --out alt-OR11A1
+vcftools --gzvcf alt7.vcf.gz --chr 7 --from-bp 143771313 --to-bp 143772245 --remove-indels --recode --recode-INFO-all --out alt-OR2A25
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 4673757 --to-bp 4674713 --remove-indels --recode --recode-INFO-all --out alt-OR51E1
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 4702979 --to-bp 4703941--remove-indels --recode --recode-INFO-all --out alt-OR51E2
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 5020213 --to-bp 5021160 --remove-indels --recode --recode-INFO-all --out alt-OR51L1
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 6023281 --to-bp 6024378 --remove-indels --recode --recode-INFO-all --out alt-OR56A4
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 59210642 --to-bp 59211589 --remove-indels --recode --recode-INFO-all --out alt-OR5A1
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 59131932 --to-bp 59132867 --remove-indels --recode --recode-INFO-all --out alt-OR5AN1
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 7846584 --to-bp 7847519 --remove-indels --recode --recode-INFO-all --out alt-OR5P3
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 124266306 --to-bp 124267247 --remove-indels --recode --recode-INFO-all --out alt-OR8B3
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 124179736 --to-bp 124180662 --remove-indels --recode --recode-INFO-all --out alt-OR8D1
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 56085783 --to-bp 56086721 --remove-indels --recode --recode-INFO-all --out alt-OR8K3
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 7949265 --to-bp 7950209 --remove-indels --recode --recode-INFO-all --out alt-OR10A6
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 123886282 --to-bp 123887217 --remove-indels --recode --recode-INFO-all --out alt-OR10G4
+vcftools --gzvcf alt11.vcf.gz --chr 11 --from-bp 123908773 --to-bp 123909708 --remove-indels --recode --recode-INFO-all --out alt-OR10G7
+vcftools --gzvcf alt14.vcf.gz --chr 14 --from-bp 22133297 --to-bp 22134238 --remove-indels --recode --recode-INFO-all --out alt-OR4E2
+vcftools --gzvcf alt14.vcf.gz --chr 14 --from-bp 20215587 --to-bp 20216528 --remove-indels --recode --recode-INFO-all --out alt-OR4Q3
+vcftools --gzvcf alt14.vcf.gz --chr 14 --from-bp 22037934 --to-bp 22038875 --remove-indels --recode --recode-INFO-all --out alt-OR10G3
+vcftools --gzvcf alt16.vcf.gz --chr 16 --from-bp 3405941 --to-bp 3406879 --remove-indels --recode --recode-INFO-all --out alt-OR2C1
+vcftools --gzvcf alt17.vcf.gz --chr 17 --from-bp 3118915 --to-bp 3119844 --remove-indels --recode --recode-INFO-all --out alt-OR1A1
+vcftools --gzvcf alt19.vcf.gz --chr 19 --from-bp 14909986 --to-bp 14910948 --remove-indels --recode --recode-INFO-all --out alt-OR7C1
+vcftools --gzvcf alt19.vcf.gz --chr 19 --from-bp 9324575 --to-bp 9325513 --remove-indels --recode --recode-INFO-all --out alt-OR7D4
+
+#call vcfs by OR for chag
+vcftools --gzvcf chag1.vcf.gz --chr 1 --from-bp 247920764 --to-bp 247921708 --remove-indels --recode --recode-INFO-all --out chag-OR1C1
+vcftools --gzvcf chag1.vcf.gz --chr 1 --from-bp 247614331 --to-bp 247615284 --remove-indels --recode --recode-INFO-all --out chag-OR2B11
+vcftools --gzvcf chag1.vcf.gz --chr 1 --from-bp 158532441 --to-bp 158533394 --remove-indels --recode --recode-INFO-all --out chag-OR6P1
+vcftools --gzvcf chag1.vcf.gz --chr 1 --from-bp 159504868 --to-bp 159505797 --remove-indels --recode --recode-INFO-all --out chag-OR10J5
+vcftools --gzvcf chag3.vcf.gz --chr 3 --from-bp 98188421 --to-bp 98189347 --remove-indels --recode --recode-INFO-all --out chag-OR5K1
+vcftools --gzvcf chag6.vcf.gz --chr 6 --from-bp 29141413 --to-bp 29142351 --remove-indels --recode --recode-INFO-all --out chag-OR2J2
+vcftools --gzvcf chag6.vcf.gz --chr 6 --from-bp 29079668 --to-bp 29080603 --remove-indels --recode --recode-INFO-all --out chag-OR2J3
+vcftools --gzvcf chag6.vcf.gz --chr 6 --from-bp 29011990 --to-bp 29012952 --remove-indels --recode --recode-INFO-all --out chag-OR2W1
+vcftools --gzvcf chag6.vcf.gz --chr 6 --from-bp 29394471 --to-bp 29395418 --remove-indels --recode --recode-INFO-all --out chag-OR11A1
+vcftools --gzvcf chag7.vcf.gz --chr 7 --from-bp 143771313 --to-bp 143772245 --remove-indels --recode --recode-INFO-all --out chag-OR2A25
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 4673757 --to-bp 4674713 --remove-indels --recode --recode-INFO-all --out chag-OR51E1
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 4702979 --to-bp 4703941--remove-indels --recode --recode-INFO-all --out chag-OR51E2
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 5020213 --to-bp 5021160 --remove-indels --recode --recode-INFO-all --out chag-OR51L1
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 6023281 --to-bp 6024378 --remove-indels --recode --recode-INFO-all --out chag-OR56A4
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 59210642 --to-bp 59211589 --remove-indels --recode --recode-INFO-all --out chag-OR5A1
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 59131932 --to-bp 59132867 --remove-indels --recode --recode-INFO-all --out chag-OR5AN1
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 7846584 --to-bp 7847519 --remove-indels --recode --recode-INFO-all --out chag-OR5P3
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 124266306 --to-bp 124267247 --remove-indels --recode --recode-INFO-all --out chag-OR8B3
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 124179736 --to-bp 124180662 --remove-indels --recode --recode-INFO-all --out chag-OR8D1
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 56085783 --to-bp 56086721 --remove-indels --recode --recode-INFO-all --out chag-OR8K3
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 7949265 --to-bp 7950209 --remove-indels --recode --recode-INFO-all --out chag-OR10A6
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 123886282 --to-bp 123887217 --remove-indels --recode --recode-INFO-all --out chag-OR10G4
+vcftools --gzvcf chag11.vcf.gz --chr 11 --from-bp 123908773 --to-bp 123909708 --remove-indels --recode --recode-INFO-all --out chag-OR10G7
+vcftools --gzvcf chag14.vcf.gz --chr 14 --from-bp 22133297 --to-bp 22134238 --remove-indels --recode --recode-INFO-all --out chag-OR4E2
+vcftools --gzvcf chag14.vcf.gz --chr 14 --from-bp 20215587 --to-bp 20216528 --remove-indels --recode --recode-INFO-all --out chag-OR4Q3
+vcftools --gzvcf chag14.vcf.gz --chr 14 --from-bp 22037934 --to-bp 22038875 --remove-indels --recode --recode-INFO-all --out chag-OR10G3
+vcftools --gzvcf chag16.vcf.gz --chr 16 --from-bp 3405941 --to-bp 3406879 --remove-indels --recode --recode-INFO-all --out chag-OR2C1
+vcftools --gzvcf chag17.vcf.gz --chr 17 --from-bp 3118915 --to-bp 3119844 --remove-indels --recode --recode-INFO-all --out chag-OR1A1
+vcftools --gzvcf chag19.vcf.gz --chr 19 --from-bp 14909986 --to-bp 14910948 --remove-indels --recode --recode-INFO-all --out chag-OR7C1
+vcftools --gzvcf chag19.vcf.gz --chr 19 --from-bp 9324575 --to-bp 9325513 --remove-indels --recode --recode-INFO-all --out chag-OR7D4
+
+#call vcfs by OR for mez
+vcftools --gzvcf mez1.vcf.gz --chr 1 --from-bp 247920764 --to-bp 247921708 --remove-indels --recode --recode-INFO-all --out mez-OR1C1
+vcftools --gzvcf mez1.vcf.gz --chr 1 --from-bp 247614331 --to-bp 247615284 --remove-indels --recode --recode-INFO-all --out mez-OR2B11
+vcftools --gzvcf mez1.vcf.gz --chr 1 --from-bp 158532441 --to-bp 158533394 --remove-indels --recode --recode-INFO-all --out mez-OR6P1
+vcftools --gzvcf mez1.vcf.gz --chr 1 --from-bp 159504868 --to-bp 159505797 --remove-indels --recode --recode-INFO-all --out mez-OR10J5
+vcftools --gzvcf mez3.vcf.gz --chr 3 --from-bp 98188421 --to-bp 98189347 --remove-indels --recode --recode-INFO-all --out mez-OR5K1
+vcftools --gzvcf mez6.vcf.gz --chr 6 --from-bp 29141413 --to-bp 29142351 --remove-indels --recode --recode-INFO-all --out mez-OR2J2
+vcftools --gzvcf mez6.vcf.gz --chr 6 --from-bp 29079668 --to-bp 29080603 --remove-indels --recode --recode-INFO-all --out mez-OR2J3
+vcftools --gzvcf mez6.vcf.gz --chr 6 --from-bp 29011990 --to-bp 29012952 --remove-indels --recode --recode-INFO-all --out mez-OR2W1
+vcftools --gzvcf mez6.vcf.gz --chr 6 --from-bp 29394471 --to-bp 29395418 --remove-indels --recode --recode-INFO-all --out mez-OR11A1
+vcftools --gzvcf mez7.vcf.gz --chr 7 --from-bp 143771313 --to-bp 143772245 --remove-indels --recode --recode-INFO-all --out mez-OR2A25
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 4673757 --to-bp 4674713 --remove-indels --recode --recode-INFO-all --out mez-OR51E1
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 4702979 --to-bp 4703941--remove-indels --recode --recode-INFO-all --out mez-OR51E2
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 5020213 --to-bp 5021160 --remove-indels --recode --recode-INFO-all --out mez-OR51L1
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 6023281 --to-bp 6024378 --remove-indels --recode --recode-INFO-all --out mez-OR56A4
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 59210642 --to-bp 59211589 --remove-indels --recode --recode-INFO-all --out mez-OR5A1
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 59131932 --to-bp 59132867 --remove-indels --recode --recode-INFO-all --out mez-OR5AN1
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 7846584 --to-bp 7847519 --remove-indels --recode --recode-INFO-all --out mez-OR5P3
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 124266306 --to-bp 124267247 --remove-indels --recode --recode-INFO-all --out mez-OR8B3
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 124179736 --to-bp 124180662 --remove-indels --recode --recode-INFO-all --out mez-OR8D1
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 56085783 --to-bp 56086721 --remove-indels --recode --recode-INFO-all --out mez-OR8K3
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 7949265 --to-bp 7950209 --remove-indels --recode --recode-INFO-all --out mez-OR10A6
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 123886282 --to-bp 123887217 --remove-indels --recode --recode-INFO-all --out mez-OR10G4
+vcftools --gzvcf mez11.vcf.gz --chr 11 --from-bp 123908773 --to-bp 123909708 --remove-indels --recode --recode-INFO-all --out mez-OR10G7
+vcftools --gzvcf mez14.vcf.gz --chr 14 --from-bp 22133297 --to-bp 22134238 --remove-indels --recode --recode-INFO-all --out mez-OR4E2
+vcftools --gzvcf mez14.vcf.gz --chr 14 --from-bp 20215587 --to-bp 20216528 --remove-indels --recode --recode-INFO-all --out mez-OR4Q3
+vcftools --gzvcf mez14.vcf.gz --chr 14 --from-bp 22037934 --to-bp 22038875 --remove-indels --recode --recode-INFO-all --out mez-OR10G3
+vcftools --gzvcf mez16.vcf.gz --chr 16 --from-bp 3405941 --to-bp 3406879 --remove-indels --recode --recode-INFO-all --out mez-OR2C1
+vcftools --gzvcf mez17.vcf.gz --chr 17 --from-bp 3118915 --to-bp 3119844 --remove-indels --recode --recode-INFO-all --out mez-OR1A1
+vcftools --gzvcf mez19.vcf.gz --chr 19 --from-bp 14909986 --to-bp 14910948 --remove-indels --recode --recode-INFO-all --out mez-OR7C1
+vcftools --gzvcf mez19.vcf.gz --chr 19 --from-bp 9324575 --to-bp 9325513 --remove-indels --recode --recode-INFO-all --out mez-OR7D4
+
+#call vcfs by OR for vin
+vcftools --gzvcf vin1.vcf.gz --chr 1 --from-bp 247920764 --to-bp 247921708 --remove-indels --recode --recode-INFO-all --out vin-OR1C1
+vcftools --gzvcf vin1.vcf.gz --chr 1 --from-bp 247614331 --to-bp 247615284 --remove-indels --recode --recode-INFO-all --out vin-OR2B11
+vcftools --gzvcf vin1.vcf.gz --chr 1 --from-bp 158532441 --to-bp 158533394 --remove-indels --recode --recode-INFO-all --out vin-OR6P1
+vcftools --gzvcf vin1.vcf.gz --chr 1 --from-bp 159504868 --to-bp 159505797 --remove-indels --recode --recode-INFO-all --out vin-OR10J5
+vcftools --gzvcf vin3.vcf.gz --chr 3 --from-bp 98188421 --to-bp 98189347 --remove-indels --recode --recode-INFO-all --out vin-OR5K1
+vcftools --gzvcf vin6.vcf.gz --chr 6 --from-bp 29141413 --to-bp 29142351 --remove-indels --recode --recode-INFO-all --out vin-OR2J2
+vcftools --gzvcf vin6.vcf.gz --chr 6 --from-bp 29079668 --to-bp 29080603 --remove-indels --recode --recode-INFO-all --out vin-OR2J3
+vcftools --gzvcf vin6.vcf.gz --chr 6 --from-bp 29011990 --to-bp 29012952 --remove-indels --recode --recode-INFO-all --out vin-OR2W1
+vcftools --gzvcf vin6.vcf.gz --chr 6 --from-bp 29394471 --to-bp 29395418 --remove-indels --recode --recode-INFO-all --out vin-OR11A1
+vcftools --gzvcf vin7.vcf.gz --chr 7 --from-bp 143771313 --to-bp 143772245 --remove-indels --recode --recode-INFO-all --out vin-OR2A25
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 4673757 --to-bp 4674713 --remove-indels --recode --recode-INFO-all --out vin-OR51E1
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 4702979 --to-bp 4703941--remove-indels --recode --recode-INFO-all --out vin-OR51E2
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 5020213 --to-bp 5021160 --remove-indels --recode --recode-INFO-all --out vin-OR51L1
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 6023281 --to-bp 6024378 --remove-indels --recode --recode-INFO-all --out vin-OR56A4
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 59210642 --to-bp 59211589 --remove-indels --recode --recode-INFO-all --out vin-OR5A1
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 59131932 --to-bp 59132867 --remove-indels --recode --recode-INFO-all --out vin-OR5AN1
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 7846584 --to-bp 7847519 --remove-indels --recode --recode-INFO-all --out vin-OR5P3
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 124266306 --to-bp 124267247 --remove-indels --recode --recode-INFO-all --out vin-OR8B3
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 124179736 --to-bp 124180662 --remove-indels --recode --recode-INFO-all --out vin-OR8D1
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 56085783 --to-bp 56086721 --remove-indels --recode --recode-INFO-all --out vin-OR8K3
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 7949265 --to-bp 7950209 --remove-indels --recode --recode-INFO-all --out vin-OR10A6
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 123886282 --to-bp 123887217 --remove-indels --recode --recode-INFO-all --out vin-OR10G4
+vcftools --gzvcf vin11.vcf.gz --chr 11 --from-bp 123908773 --to-bp 123909708 --remove-indels --recode --recode-INFO-all --out vin-OR10G7
+vcftools --gzvcf vin14.vcf.gz --chr 14 --from-bp 22133297 --to-bp 22134238 --remove-indels --recode --recode-INFO-all --out vin-OR4E2
+vcftools --gzvcf vin14.vcf.gz --chr 14 --from-bp 20215587 --to-bp 20216528 --remove-indels --recode --recode-INFO-all --out vin-OR4Q3
+vcftools --gzvcf vin14.vcf.gz --chr 14 --from-bp 22037934 --to-bp 22038875 --remove-indels --recode --recode-INFO-all --out vin-OR10G3
+vcftools --gzvcf vin16.vcf.gz --chr 16 --from-bp 3405941 --to-bp 3406879 --remove-indels --recode --recode-INFO-all --out vin-OR2C1
+vcftools --gzvcf vin17.vcf.gz --chr 17 --from-bp 3118915 --to-bp 3119844 --remove-indels --recode --recode-INFO-all --out vin-OR1A1
+vcftools --gzvcf vin19.vcf.gz --chr 19 --from-bp 14909986 --to-bp 14910948 --remove-indels --recode --recode-INFO-all --out vin-OR7C1
+vcftools --gzvcf vin19.vcf.gz --chr 19 --from-bp 9324575 --to-bp 9325513 --remove-indels --recode --recode-INFO-all --out vin-OR7D4
+
+#call vcfs by OR for den
+vcftools --gzvcf den1.vcf.gz --chr 1 --from-bp 247920764 --to-bp 247921708 --remove-indels --recode --recode-INFO-all --out den1-OR1C1
+vcftools --gzvcf den1.vcf.gz --chr 1 --from-bp 247614331 --to-bp 247615284 --remove-indels --recode --recode-INFO-all --out den1-OR2B11
+vcftools --gzvcf den1.vcf.gz --chr 1 --from-bp 158532441 --to-bp 158533394 --remove-indels --recode --recode-INFO-all --out den1-OR6P1
+vcftools --gzvcf den1.vcf.gz --chr 1 --from-bp 159504868 --to-bp 159505797 --remove-indels --recode --recode-INFO-all --out den1-OR10J5
+vcftools --gzvcf den3.vcf.gz --chr 3 --from-bp 98188421 --to-bp 98189347 --remove-indels --recode --recode-INFO-all --out den1-OR5K1
+vcftools --gzvcf den6.vcf.gz --chr 6 --from-bp 29141413 --to-bp 29142351 --remove-indels --recode --recode-INFO-all --out den1-OR2J2
+vcftools --gzvcf den6.vcf.gz --chr 6 --from-bp 29079668 --to-bp 29080603 --remove-indels --recode --recode-INFO-all --out den1-OR2J3
+vcftools --gzvcf den6.vcf.gz --chr 6 --from-bp 29011990 --to-bp 29012952 --remove-indels --recode --recode-INFO-all --out den1-OR2W1
+vcftools --gzvcf den6.vcf.gz --chr 6 --from-bp 29394471 --to-bp 29395418 --remove-indels --recode --recode-INFO-all --out den1-OR11A1
+vcftools --gzvcf den7.vcf.gz --chr 7 --from-bp 143771313 --to-bp 143772245 --remove-indels --recode --recode-INFO-all --out den1-OR2A25
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 4673757 --to-bp 4674713 --remove-indels --recode --recode-INFO-all --out den1-OR51E1
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 4702979 --to-bp 4703941--remove-indels --recode --recode-INFO-all --out den1-OR51E2
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 5020213 --to-bp 5021160 --remove-indels --recode --recode-INFO-all --out den1-OR51L1
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 6023281 --to-bp 6024378 --remove-indels --recode --recode-INFO-all --out den1-OR56A4
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 59210642 --to-bp 59211589 --remove-indels --recode --recode-INFO-all --out den1-OR5A1
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 59131932 --to-bp 59132867 --remove-indels --recode --recode-INFO-all --out den1-OR5AN1
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 7846584 --to-bp 7847519 --remove-indels --recode --recode-INFO-all --out den1-OR5P3
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 124266306 --to-bp 124267247 --remove-indels --recode --recode-INFO-all --out den1-OR8B3
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 124179736 --to-bp 124180662 --remove-indels --recode --recode-INFO-all --out den1-OR8D1
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 56085783 --to-bp 56086721 --remove-indels --recode --recode-INFO-all --out den1-OR8K3
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 7949265 --to-bp 7950209 --remove-indels --recode --recode-INFO-all --out den1-OR10A6
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 123886282 --to-bp 123887217 --remove-indels --recode --recode-INFO-all --out den1-OR10G4
+vcftools --gzvcf den11.vcf.gz --chr 11 --from-bp 123908773 --to-bp 123909708 --remove-indels --recode --recode-INFO-all --out den1-OR10G7
+vcftools --gzvcf den14.vcf.gz --chr 14 --from-bp 22133297 --to-bp 22134238 --remove-indels --recode --recode-INFO-all --out den1-OR4E2
+vcftools --gzvcf den14.vcf.gz --chr 14 --from-bp 20215587 --to-bp 20216528 --remove-indels --recode --recode-INFO-all --out den1-OR4Q3
+vcftools --gzvcf den14.vcf.gz --chr 14 --from-bp 22037934 --to-bp 22038875 --remove-indels --recode --recode-INFO-all --out den1-OR10G3
+vcftools --gzvcf den16.vcf.gz --chr 16 --from-bp 3405941 --to-bp 3406879 --remove-indels --recode --recode-INFO-all --out den1-OR2C1
+vcftools --gzvcf den17.vcf.gz --chr 17 --from-bp 3118915 --to-bp 3119844 --remove-indels --recode --recode-INFO-all --out den1-OR1A1
+vcftools --gzvcf den19.vcf.gz --chr 19 --from-bp 14909986 --to-bp 14910948 --remove-indels --recode --recode-INFO-all --out den1-OR7C1
+vcftools --gzvcf den19.vcf.gz --chr 19 --from-bp 9324575 --to-bp 9325513 --remove-indels --recode --recode-INFO-all --out den1-OR7D4
+
+#call vcfs by OR for ust
+vcftools --gzvcf ust1.vcf.gz --chr 1 --from-bp 247920764 --to-bp 247921708 --remove-indels --recode --recode-INFO-all --out ust-OR1C1
+vcftools --gzvcf ust1.vcf.gz --chr 1 --from-bp 247614331 --to-bp 247615284 --remove-indels --recode --recode-INFO-all --out ust-OR2B11
+vcftools --gzvcf ust1.vcf.gz --chr 1 --from-bp 158532441 --to-bp 158533394 --remove-indels --recode --recode-INFO-all --out ust-OR6P1
+vcftools --gzvcf ust1.vcf.gz --chr 1 --from-bp 159504868 --to-bp 159505797 --remove-indels --recode --recode-INFO-all --out ust-OR10J5
+vcftools --gzvcf ust3.vcf.gz --chr 3 --from-bp 98188421 --to-bp 98189347 --remove-indels --recode --recode-INFO-all --out ust-OR5K1
+vcftools --gzvcf ust6.vcf.gz --chr 6 --from-bp 29141413 --to-bp 29142351 --remove-indels --recode --recode-INFO-all --out ust-OR2J2
+vcftools --gzvcf ust6.vcf.gz --chr 6 --from-bp 29079668 --to-bp 29080603 --remove-indels --recode --recode-INFO-all --out ust-OR2J3
+vcftools --gzvcf ust6.vcf.gz --chr 6 --from-bp 29011990 --to-bp 29012952 --remove-indels --recode --recode-INFO-all --out ust-OR2W1
+vcftools --gzvcf ust6.vcf.gz --chr 6 --from-bp 29394471 --to-bp 29395418 --remove-indels --recode --recode-INFO-all --out ust-OR11A1
+vcftools --gzvcf ust7.vcf.gz --chr 7 --from-bp 143771313 --to-bp 143772245 --remove-indels --recode --recode-INFO-all --out ust-OR2A25
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 4673757 --to-bp 4674713 --remove-indels --recode --recode-INFO-all --out ust-OR51E1
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 4702979 --to-bp 4703941--remove-indels --recode --recode-INFO-all --out ust-OR51E2
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 5020213 --to-bp 5021160 --remove-indels --recode --recode-INFO-all --out ust-OR51L1
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 6023281 --to-bp 6024378 --remove-indels --recode --recode-INFO-all --out ust-OR56A4
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 59210642 --to-bp 59211589 --remove-indels --recode --recode-INFO-all --out ust-OR5A1
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 59131932 --to-bp 59132867 --remove-indels --recode --recode-INFO-all --out ust-OR5AN1
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 7846584 --to-bp 7847519 --remove-indels --recode --recode-INFO-all --out ust-OR5P3
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 124266306 --to-bp 124267247 --remove-indels --recode --recode-INFO-all --out ust-OR8B3
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 124179736 --to-bp 124180662 --remove-indels --recode --recode-INFO-all --out ust-OR8D1
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 56085783 --to-bp 56086721 --remove-indels --recode --recode-INFO-all --out ust-OR8K3
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 7949265 --to-bp 7950209 --remove-indels --recode --recode-INFO-all --out ust-OR10A6
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 123886282 --to-bp 123887217 --remove-indels --recode --recode-INFO-all --out ust-OR10G4
+vcftools --gzvcf ust11.vcf.gz --chr 11 --from-bp 123908773 --to-bp 123909708 --remove-indels --recode --recode-INFO-all --out ust-OR10G7
+vcftools --gzvcf ust14.vcf.gz --chr 14 --from-bp 22133297 --to-bp 22134238 --remove-indels --recode --recode-INFO-all --out ust-OR4E2
+vcftools --gzvcf ust14.vcf.gz --chr 14 --from-bp 20215587 --to-bp 20216528 --remove-indels --recode --recode-INFO-all --out ust-OR4Q3
+vcftools --gzvcf ust14.vcf.gz --chr 14 --from-bp 22037934 --to-bp 22038875 --remove-indels --recode --recode-INFO-all --out ust-OR10G3
+vcftools --gzvcf ust16.vcf.gz --chr 16 --from-bp 3405941 --to-bp 3406879 --remove-indels --recode --recode-INFO-all --out ust-OR2C1
+vcftools --gzvcf ust17.vcf.gz --chr 17 --from-bp 3118915 --to-bp 3119844 --remove-indels --recode --recode-INFO-all --out ust-OR1A1
+vcftools --gzvcf ust19.vcf.gz --chr 19 --from-bp 14909986 --to-bp 14910948 --remove-indels --recode --recode-INFO-all --out ust-OR7C1
+vcftools --gzvcf ust19.vcf.gz --chr 19 --from-bp 9324575 --to-bp 9325513 --remove-indels --recode --recode-INFO-all --out ust-OR7D4

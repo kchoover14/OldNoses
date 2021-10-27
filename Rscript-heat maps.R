@@ -1,40 +1,31 @@
-# This script generates data for Extended Data Figure 4
-# This script generates heat maps for Figure 1 with genes ordered by chromosomal position
-
 library(readxl); library(dplyr); library(psych)
 library(ggplot2); library(ggpubr); library(viridis)
 
-#Variation Summary
-sink("genetic varation-DNA summary.txt")
-describeBy(genvar, group=genvar$Group, digits = 3)
-sink()
-
-sink("genetic varation-AA summary.txt")
-describeBy(aavar, group=aavar$Group, digits = 3)
-sink()
+#Data
+genvar = read.csv("dna.pervar.csv", header=TRUE)
+aavar = read.csv("aa.pervar.csv", header=TRUE)
 
 #DNA Heat Map
-genvar = read_excel("data-pervar by gene-humref.xlsx", sheet = "dna-pervar")
-genvar$Gene = factor(genvar$Gene,levels=sort(unique(genvar$Gene),decreasing=TRUE))
-genvar$Group = factor(genvar$Group,
+genvar$Gene = factor(genvar$Gene)
+genvar$Population = factor(genvar$Population,
   levels = c('Ancient Neandertal Altai', 'Ancient Neandertal Chagyrskaya',
     "Ancient Neandertal Vindija", "Ancient Denisovan",
-    "Ancient Human-Ust'-Ishim", 'Africa Esan', "Africa Gambian",
-    "Africa Luhye", "Africa Mende", "Africa Nigeria",
-    "Americas Black", "Americas Black Carribean",
+    "Ancient Ust Ishim", 'Africa Esan', "Africa Gambian",
+    "Africa Luhya", "Africa Mende", "Africa Yoruban",
+    "Americas Black USA", "Americas Black Caribbean",
     "Europe British", "Europe Finn", "Europe Spanish",
-    "Europe Tuscan", "Americas White", "SW Asia Bangaldeshi",
-    "SW Asia Gujarati", 'SW Asia Pakistan', 'SW Asia Tamil',
+    "Europe Tuscan", "Americas White USA", "SW Asia Bengali",
+    "SW Asia Gujarati", 'SW Asia Punjabi', 'SW Asia Tamil',
     'SW Asia Telugu', 'Asia Dai', 'Asia Han Beijing',
     'Asia Han Southern', 'Asia Japanese',
-    'Asia Kihn', 'Americas Columbian',
+    'Asia Kinh', 'Americas Columbian',
     'Americas Mexican', 'Americas Puerto Rican', 'Americas Peruvian'))
 
 genvar <- genvar %>%
   arrange(desc(Chr, Start)) %>%               # sort your dataframe
   mutate(Gene = factor(Gene, unique(Gene))) # reset your factor-column based on that order
 
-pa = ggplot(genvar, aes(x=Group, y=Gene, fill=PerVar)) +
+pa = ggplot(genvar, aes(x=Population, y=Gene, fill=PerVar)) +
   theme(axis.text.x = element_text(angle = 45, hjust=1))+
   xlab("") +
   ylab("Percent of Gene with DNA Variants") +
@@ -45,27 +36,26 @@ pa = ggplot(genvar, aes(x=Group, y=Gene, fill=PerVar)) +
   theme(text=element_text(size=35,  family="sans"))
 
 #AA Heat Map
-aavar = read_excel("data-pervar by gene-humref.xlsx", sheet = "aa-pervar")
-aavar$Gene = factor(aavar$Gene,levels=sort(unique(aavar$Gene),decreasing=TRUE))
-aavar$Group = factor(aavar$Group,
-                      levels = c('Ancient Neandertal Altai', 'Ancient Neandertal Chagyrskaya',
-                                 "Ancient Neandertal Vindija", "Ancient Denisovan",
-                                 "Ancient Human-Ust'-Ishim", 'Africa Esan', "Africa Gambian",
-                                 "Africa Luhye", "Africa Mende", "Africa Nigeria",
-                                 "Americas Black", "Americas Black Carribean",
-                                 "Europe British", "Europe Finn", "Europe Spanish",
-                                 "Europe Tuscan", "Americas White", "SW Asia Bangaldeshi",
-                                 "SW Asia Gujarati", 'SW Asia Pakistan', 'SW Asia Tamil',
-                                 'SW Asia Telugu', 'Asia Dai', 'Asia Han Beijing',
-                                 'Asia Han Southern', 'Asia Japanese',
-                                 'Asia Kihn', 'Americas Columbian',
-                                 'Americas Mexican', 'Americas Puerto Rican', 'Americas Peruvian'))
+aavar$Gene = factor(aavar$Gene)
+aavar$Population = factor(aavar$Population,
+                          levels = c('Ancient Neandertal Altai', 'Ancient Neandertal Chagyrskaya',
+                                     "Ancient Neandertal Vindija", "Ancient Denisovan",
+                                     "Ancient Ust Ishim", 'Africa Esan', "Africa Gambian",
+                                     "Africa Luhya", "Africa Mende", "Africa Yoruban",
+                                     "Americas Black USA", "Americas Black Caribbean",
+                                     "Europe British", "Europe Finn", "Europe Spanish",
+                                     "Europe Tuscan", "Americas White USA", "SW Asia Bengali",
+                                     "SW Asia Gujarati", 'SW Asia Punjabi', 'SW Asia Tamil',
+                                     'SW Asia Telugu', 'Asia Dai', 'Asia Han Beijing',
+                                     'Asia Han Southern', 'Asia Japanese',
+                                     'Asia Kinh', 'Americas Columbian',
+                                     'Americas Mexican', 'Americas Puerto Rican', 'Americas Peruvian'))
 
 aavar <- aavar %>%
   arrange(desc(Chr, Start)) %>%               # sort your dataframe
   mutate(Gene = factor(Gene, unique(Gene))) # reset your factor-column based on that order
 
-pb = ggplot(aavar, aes(x=Group, y=Gene, fill=PerVar)) +
+pb = ggplot(aavar, aes(x=Population, y=Gene, fill=PerVar)) +
   theme(axis.text.x = element_text(angle = 45, hjust=1))+
   xlab("") +
   ylab("Percent of Amino Acids with Protein Variants") +
@@ -75,7 +65,9 @@ pb = ggplot(aavar, aes(x=Group, y=Gene, fill=PerVar)) +
   theme(legend.title = element_blank())+
   theme(text=element_text(size=35,  family="sans"))
 
-#PLOT
+png("F1-genvar-heat maps.png", width=45, height=20,
+    res=400, units = "in")
 ggarrange(pa, ggplot() + theme_void(), pb,
           nrow=1, widths = c(4, -1, 4))
+dev.off()
 
